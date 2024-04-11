@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>BrainStrokeLab</title>
+    <link rel="shortcut icon" href="../static/img/img1.jpg" type="image/x-icon">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
+        integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+    <!--Google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;900&family=Ubuntu:wght@300&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cabin&family=Poppins:wght@100;300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!--Style sheets-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/65bc7f4f38.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.0.7/css/boxicons.min.css">
+
+    <link href="../static/style.css" rel="stylesheet">
+    <script src="sc.js"></script>
+
+      
+</head>
+
+<body class=" margin: 0 auto;">
+
+    <!-- <div class="video-background">
+        <video autoplay muted loop id="video-bg">
+            <source src="../static/img/bg1.mp4" type="video/mp4">
+            <p>Your browser does not support the video tag.</p>
+        </video> -->
+
+        <!-- Navbar -->
+        <navbar-expand-lg class="navbar navbar-expand-lg navbar-dark bg-dark py-3 fixed-top">
+            <div class="container nn font-monospace">
+                <a href="/index" class="navbar-brand text-warning">Brain Stroke Lab</a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navmenu">
+                    <ul class="navbar nav ms-auto">
+                        <li class="nav-item">
+                            <a href="/landing" class="nav-link">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#types" class="nav-link">Types</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#about" class="nav-link">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#con" class="nav-link">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/login">
+                                <button type="submit" class="btn btn-outline-light btn-md mx-2">Login</button>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </navbar-expand-lg>
+        <!-- Navbar ends-->
+
+        <main class="main">
+            <!-- home start -->
+            <section class="text-light px-5 text-center">
+                <div class="container-fluid mt-5 p-5 header">
+
+                    <div class="home">
+                        <div class="font-monospace m-5 h1 size"
+                            style="color: blue; text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);">Welcome to <span
+                                class="text-warning">Brain Stroke Lab</span>!</div>
+                    </div>
+
+                </div>
+            </section>
+            <!-- home end -->
+            <hr>
+            <!-- prediction start -->
+            <div class="Pred">
+                <div class="pred-img">
+                    <img src="../static/img/img2.png" class="img-fluid" alt="brain image">
+                </div>
+                <div class="pred-text ">
+                    <h2>IS IT A BRAIN STROKE ?</h2>
+                    <P>Check with stroke predictor.</P>
+                    <p>uplod your ct scan and find out.</p>
+                    <div class="information">
+                        <a href="/login">
+                            <button class="btn btn-outline-dark btn-md mx-2">Login</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- prediction ends -->
+
+            <!-- types start -->
+            <section class="types" id="types">
+                <div class="heading">
+                    <h2>Types of Brain Strokes</h2>
+                </div>
+                <div class="container text-center types-content">
+                    <div class="row type-row">
+
+                        <div class="col types-box">
+                            <i class='bx bx-brain'></i>
+                            <h3>Ischemic Stroke</h3>
+                            <p>A condition in which a blood vessel in the brain ruptures and causes bleeding inside the
+                                brain.
+                                This causes severe headache, tingling, or paralysis in face, arm, or leg, trouble
+                                swallowing,
+                                trouble with vision, loss of balance, loss of consciousness and confusion.</p>
+                        </div>
+
+                        <div class="col types-box">
+                            <i class='bx bxs-brain'></i>
+                            <h3>Hemmoragic Stroke</h3>
+                            <p>A type of stroke that occurs when a blood vessel supplying blood to the brain is
+                                obstructed,
+                                leading to a lack of blood flow and oxygen to part of the brain. This obstruction is
+                                typically
+                                caused by a blood clot or plaque buildup in the arteries.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- types ends -->
+            <hr>
+            <!-- abstract start -->
+            <section class="about" id="about">
+                <div class="heading">
+
+                    <h2>ABOUT</h2>
+                    <p>The Brain Stroke Lab is a online platform designed to assist in the early detection and
+                        prevention of
+                        strokes. Through advanced medical imaging analysis and artificial intelligence algorithms, this
+                        website offers users a user-friendly interface to input relevant medical data and receive
+                        real-time
+                        assessments of stroke risk</p>
+                </div>
+            </section>
+            <!-- abstract end -->
+            <hr>
+            <!--contact start  -->
+            <div class="cta" id="con">
+                <div class="heading">
+                    <h2>CONTACT US</h2>
+                </div>
+
+                <div class=" container-fluid text-center">
+                    <div class="row contact">
+                        <div class=" col-4 footerdivs">
+                            <h1>BrainStrokeLab</h1>
+                        </div>
+
+                        <div class="col-8">
+                            <div class="row ">
+                                <div class="col footerdivs">
+                                    <h4>Quick links</h4>
+                                    <a href="/landing">home</a>
+                                    <a href="#types">Types</a>
+                                    <a href="#about">About</a>
+                                    <a href="#con">contact</a>
+                                </div>
+
+                                <div class="col footerdivs">
+                                    <h4>Contact us</h4>
+                                    <ul>
+                                        <a href="#" class="row">
+                                            Address:Indira Nagar,Nashik,India
+                                        </a>
+                                        <a href="tel:+123 456 7890" class="row">
+                                            Contact Us: +123 456 7890
+                                        </a>
+                                        <a href="mailto:contact@brainstrokelabs.com" class="row">
+                                            Email Us: contact@brainstrokelabs.com
+                                        </a>
+                                    </ul>
+                                </div>
+                                <div class=" col footerdivs">
+                                    <h4>Social sites</h4>
+                                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                                    <i class="fa fa-linkedin" aria-hidden="true"></i>
+                                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                                    <i class="fa fa-youtube" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Contact ends -->
+            <hr>
+            <section>
+                <div class="copyright">
+                    <h2> © BrainStrokeLab | All Right Reserved.</h2>
+                </div>
+            </section>
+            <!-- Home Section Ends -->
+
+        </main>
+</body>
+
+</html>

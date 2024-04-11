@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <style>
+        @import url(https://unpkg.com/@webpixels/css@1.1.5/dist/index.css);
+        @import url("https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.4.0/font/bootstrap-icons.min.css");
+
+        .d-flex {
+            margin-top: 90px;
+        }
+    </style>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <navbar-expand-lg class="navbar navbar-expand-lg navbar-dark bg-dark py-3 fixed-top">
+        <div class="container font-monospace">
+            <a href="/landing_admin" class="navbar-brand text-warning">Brain Stroke Lab</a>
+          
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+             
+            <div class="collapse navbar-collapse" id="navmenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <form action="/logout" method="post">
+                            <button type="submit" class="btn btn-outline-light btn-lg mx-2">Logout</button>
+                        </form>                    
+                    </li>
+                
+                </ul>
+            </div>
+        </div>
+    </navbar-expand-lg>
+    <!-- Navbar ends-->
+
+    <!-- Dashboard -->
+    <div class="d-flex flex-column flex-lg-row h-lg-full bg-surface-secondary">
+        <!-- Main content -->
+        <div class="h-screen flex-grow-1 overflow-y-lg-auto">
+            <!-- Main -->
+            <main class="py-6 bg-surface-secondary">
+                <div class="container-fluid">
+                    <!-- Users Table -->
+                    <div class="card shadow border-0 mb-7">
+                        <div class="table-responsive">
+                            <table class="table table-hover table-nowrap">
+                                <thead class="thead-light">
+                                    <tr>
+                                        <th scope="col">Name</th>
+                                        <th scope="col">Email</th>
+                                        <th scope="col">Phone Number</th>
+                                        <th scope="col">Username</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for user in users %}
+                                    <tr>
+                                        <td>
+                                            <img alt="..." src="https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=3&amp;w=256&amp;h=256&amp;q=80" class="avatar avatar-sm rounded-circle me-2">
+                                            <a class="text-heading font-semibold" href="#">
+                                                {{ user[0] }}
+                                            </a>
+                                        </td>
+                                        <td>{{ user[1] }}</td>
+                                        <td>{{ user[2] }}</td>
+                                        <td>{{ user[3] }}</td>
+                                        <td class="text-end">
+                                            <form method="POST">
+                                                <input type="hidden" name="username" value="{{ user[3] }}">
+                                                <button type="submit" class="btn btn-sm btn-square btn-neutral text-danger-hover">
+                                                    <i class="bi bi-trash"></i>
+                                                </button>
+                                            </form>
+                                        </td>
+                                    </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Predictions Table -->
+                    <div class="card shadow border-0">
+                        <div class="table-responsive">
+                            <table class="table table-hover table-nowrap">
+                                <thead class="thead-light">
+                                    <tr>
+                                        <th scope="col">User ID</th>
+                                        <th scope="col">Label</th>
+                                        <th scope="col">Image Data</th>
+                                    </tr>
+                                </thead>
+                                 <tbody>
+                                    {% for user, predictions in user_predictions.items() %}
+                                        {% for prediction in predictions %}
+                                            <tr>
+                                                <td>{{ user }}</td>
+                                                <td>{{ prediction[2] }}</td>
+                                                <!-- <td>{{ prediction[3] }}</td> -->
+
+                                                <td><img src="data:base64,{{img_path }}"></td>
+                                            </tr>
+                                        {% endfor %}
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+</body>
+</html>
