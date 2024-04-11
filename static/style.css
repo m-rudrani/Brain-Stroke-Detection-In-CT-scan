@@ -1,0 +1,256 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    scroll-padding-top: 2rem;
+    font-family: "Poppins", sans-serif;
+}
+
+:root {
+    --main-color: #033a80;
+    --bg-color: rgb(209, 217, 235);
+    /* --text-color: #0f0c27; */
+    --hover: hsl(260, 100%, 51%);
+    --big-font: 3.2rem;
+    --medium-font: 1.8rem;
+    --p-font: 0.941rem;
+}
+
+body.active {
+    --text-color: #fff;
+    --bg-color: #0f0c27;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+#background-container {
+    /* Add any additional styles for the background container */
+    width: 100%;
+    height: 100vh; /* Adjust height as needed */
+    background-size: cover;
+    background-position: center;
+}
+
+.video-background {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -1; /* Ensure the video stays behind other content */
+  }
+  
+#video-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+}
+
+  
+*::selection {
+    color: var(--bg-color);
+    background: var(--main-color);
+}
+
+/* Styles for navigation links */
+.nav-link {
+    color: white; /* Set the default text color to white */
+    text-decoration: none; /* Remove underline from links */
+    transition: color 0.3s, text-decoration 0.3s; /* Smooth transition effect for color and text-decoration changes */
+  }
+  
+  /* Styles for navigation links on hover */
+  .nav-link:hover {
+    color: rgb(83, 83, 210); /* Change text color to blue on hover */
+    text-decoration: underline; /* Add underline on hover */
+  }
+  
+/* main */
+.header {
+    background-image: url("https://img.freepik.com/premium-photo/nocebo-effect-concept_798657-4507.jpg?size=626&ext=jpg&ga=GA1.1.1266505969.1707910349&semt=ais");
+    background-color: rgb(225, 211, 211);
+    background-blend-mode: multiply;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    max-width: 100% !important;
+    height: 500px;
+}
+
+
+.heading {
+    text-align: center;
+}
+
+.heading h2 {
+    font-size: 30px;
+}
+
+/* prediction */
+
+.Pred {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin: 2rem;
+    padding: 30px;
+    /* margin-left: 50px; */
+}
+
+.pred-img {
+    padding: 30px;
+    margin: 30px;
+}
+
+.pred-text{
+    padding: 70px;
+    margin: 30px;
+}
+.pred-text p {
+    font-size: var(--p-font);
+    font-weight: 400;
+    text-align: justify;
+    
+}
+
+.information {
+    margin: 1rem 0 1.4rem;
+}
+
+/* type */
+
+.types {
+    margin: 30px;
+    padding: 40px;
+    border: 2px solid;
+}
+
+.types-content {
+    display: grid;
+    /* grid-template-columns: repeat(auto-fit, minmax(200px, auto)); */
+    justify-content: center;
+    gap: 5rem;
+    margin-top: 2rem;
+}
+
+.types-box {
+    padding: 20px;
+    margin: 30px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-radius: 0.5rem;
+    border-bottom: 2px solid var(--main-color);
+    box-shadow: 0 2px 7px rgb(14 55 54 / 15%);
+}
+
+.types-box:hover {
+    background-color: #02225a;
+}
+
+.types-box h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0.7rem 0 0.4rem;
+}
+
+.types-box:hover h3 {
+    color: #fff;
+}
+.types-box:hover p {
+    color: #fff;
+}
+.types-box .bx {
+    padding-top: 2rem;
+    font-size: 54px;
+    color: var(--main-color);
+}
+
+.types-box:hover .bx {
+    color: #22cf91;
+}
+
+
+/* About */
+.about {
+    /* margin: 20px; */
+    padding: 10px;
+    justify-content: center;
+}
+
+.about p{
+    padding: 0px;
+}
+
+
+/*Contact section*/
+.cta{
+    margin: 10px;
+}
+
+.heading{
+    padding: 20px;
+}
+
+.contact {
+	width: 100%;
+    padding: 20px;
+	background-color: rgb(150 165 188);
+	display: flex;
+	flex-wrap: wrap;
+}
+.footerdivs h1{
+	text-align: center;
+	font-family: 'Lobster';
+    padding: 10px;
+}
+.footerdivs h4{
+	/* color: #fff; */
+	font-family: 'Lobster';
+}
+
+.contact .footerdivs a{
+	color: #fff;
+	font-size: 14px;
+	font-weight: 400;
+	font-family: sans-serif;
+	text-transform: uppercase;
+	display: block;
+    padding: 5px;
+}
+
+.contact .footerdivs a:hover{
+	color: darkblue;
+}
+
+.contact .footerdivs i{
+	color: #fff;
+	display: block;
+    padding: 5px;
+	cursor: pointer;
+}
+
+.contact .footerdivs i:hover{
+	color: darkblue;
+}
+
+.copyright h2{
+	color: #303c4f;
+	font-size: 20px;
+    text-align:center;
+	/* padding-bottom: 30px; */
+}
