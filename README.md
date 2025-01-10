@@ -75,18 +75,20 @@ Brain Stroke Lab is a web-based application designed to assist in the early dete
 ### Screenshots
 
 #### Home Page
-![Home Page](static/screenshots/homepage.png)
-
-#### Upload Image Page
-![Upload Page](static/screenshots/upload.png)
+![Home Page](static/screenshots/home.jpeg)
+![Home Page](static/screenshots/prediction.jpeg)
+![Home Page](static/screenshots/types.jpeg)
+![Home Page](static/screenshots/contact.jpeg)
 
 #### Prediction Result
-![Prediction Result](static/screenshots/result.png)
+![Prediction Result](static/screenshots/upload_img.jpeg)
+
+#### Login Pages
+![Login Pages](static/screenshots/login.jpeg)
+![Login Pages](static/screenshots/admin.jpeg)
 
 #### Admin Panel
-![Admin Panel](static/screenshots/admin.png)
-
-*Ensure that screenshots are stored in `static/screenshots/` directory.*
+![Admin Panel](static/screenshots/admin_panel.jpeg)
 
 ---
 
